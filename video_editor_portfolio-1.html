@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101018">
+<title>Your Name | Video Editor & Creator</title>
+<style>
+:root{--bg:#101018;--panel:#191925;--text:#f7f5ff;--muted:#aaa8bb;--a:#9b7bff;--b:#ff7db8;--line:#ffffff18}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 85% 8%,#43265c55,transparent 28%),radial-gradient(circle at 8% 35%,#234c6350,transparent 25%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,91%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{font-weight:900;letter-spacing:.08em}.brand span{color:var(--a)}.links{display:flex;gap:25px;color:var(--muted);font-size:14px}.links a:hover{color:white}
+.hero{min-height:660px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:35px;padding:70px 0}.eyebrow{color:#c7b7ff;font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:800}.hero h1{font-size:clamp(46px,7vw,82px);line-height:1.02;letter-spacing:-.055em;margin:18px 0}.gradient{background:linear-gradient(100deg,#a88bff,#ff8dbd 55%,#ffc27d);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:570px;color:var(--muted);font-size:18px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{padding:13px 21px;border-radius:999px;font-weight:800;font-size:14px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line)}.primary{background:linear-gradient(100deg,var(--a),var(--b));color:#120f1c;border:0}.secondary{background:#ffffff08}.visual{position:relative;min-height:390px;display:grid;place-items:center}.orb{width:min(340px,75vw);aspect-ratio:1;border-radius:38% 62% 58% 42%/42% 43% 57% 58%;background:linear-gradient(140deg,#9b7bff,#ff7db8 58%,#ffbe79);filter:saturate(1.1);box-shadow:0 25px 100px #a06dff55;transform:rotate(-8deg)}.screen{position:absolute;width:75%;max-width:340px;padding:18px;border:1px solid #ffffff35;border-radius:22px;background:#151520dd;backdrop-filter:blur(14px);transform:rotate(5deg);box-shadow:0 24px 65px #0008}.screen-top{display:flex;justify-content:space-between;color:#c9c4d8;font-size:11px;letter-spacing:.13em}.screen-art{height:190px;border-radius:14px;margin:15px 0;background:linear-gradient(135deg,#272342,#754c91 50%,#f28bab);display:grid;place-items:center;font-size:52px}.screen-foot{display:flex;justify-content:space-between;font-size:12px;color:#d6d1e4}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0 85px}.stat{background:#ffffff08;border:1px solid var(--line);border-radius:18px;padding:20px}.stat strong{font-size:26px;display:block}.stat span{font-size:13px;color:var(--muted)}
+section{padding:62px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px}.section-head h2{font-size:clamp(30px,4vw,44px);letter-spacing:-.04em;margin:5px 0}.section-head p{color:var(--muted);max-width:430px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{border:1px solid var(--line);background:var(--panel);border-radius:22px;overflow:hidden;transition:.25s}.project:hover{transform:translateY(-5px);border-color:#a88bff88}.thumb{aspect-ratio:16/10;display:grid;place-items:center;font-size:42px;position:relative;overflow:hidden}.thumb:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#ffffff20,transparent 60%)}.t1{background:linear-gradient(135deg,#182d47,#547caa,#c78aa5)}.t2{background:linear-gradient(135deg,#3e214f,#a34e79,#ffb77a)}.t3{background:linear-gradient(135deg,#132e2d,#358e7b,#b3c67a)}.project-body{padding:18px}.tag{font-size:11px;color:#c6b5ff;text-transform:uppercase;letter-spacing:.12em;font-weight:800}.project h3{margin:6px 0;font-size:19px}.project p{margin:0;color:var(--muted);font-size:13px}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.service{padding:23px;border-radius:20px;background:#ffffff08;border:1px solid var(--line)}.service .ico{font-size:25px}.service h3{margin:8px 0 4px}.service p{margin:0;color:var(--muted);font-size:14px}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center}.about-card{min-height:280px;border-radius:25px;background:linear-gradient(145deg,#59418c,#d16e9c 60%,#f0b47e);display:grid;place-items:center;font-size:65px}.about p{color:var(--muted)}.chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.chip{padding:8px 12px;border-radius:999px;border:1px solid var(--line);font-size:12px;color:#d8d3e7}
+.contact{padding:45px;border-radius:28px;background:linear-gradient(115deg,#28213d,#3c294a 55%,#4b2d43);border:1px solid #ffffff20;display:flex;justify-content:space-between;align-items:center;gap:25px}.contact h2{font-size:clamp(28px,4vw,42px);line-height:1.1;margin:7px 0}.contact p{color:#d0c8dc;margin:0}
+footer{padding:35px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:760px){.links{gap:12px;font-size:12px}.hero{grid-template-columns:1fr;padding:55px 0 35px;min-height:auto}.visual{min-height:330px}.stats{margin-bottom:45px}.cards{grid-template-columns:1fr}.services{grid-template-columns:1fr}.about{grid-template-columns:1fr}.about-card{min-height:210px}.contact{padding:28px;display:block}.contact .btn{margin-top:20px}}
+@media(max-width:420px){.links a:nth-child(2){display:none}.hero h1{font-size:48px}.stat{padding:14px}.stat strong{font-size:22px}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <a class="brand" href="#home">YOUR<span>NAME.</span></a>
+  <nav class="links"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+</header>
+<main>
+<section class="wrap hero" id="home">
+  <div>
+    <div class="eyebrow">Video Editor · Reels Creator</div>
+    <h1>Making every<br><span class="gradient">second count.</span></h1>
+    <p class="lead">I turn raw clips into engaging reels, cinematic edits and scroll-stopping videos that help stories stand out.</p>
+    <div class="actions"><a class="btn primary" href="#work">Explore my work ↗</a><a class="btn secondary" href="#contact">Let's work together</a></div>
+  </div>
+  <div class="visual"><div class="orb"></div><div class="screen"><div class="screen-top"><span>CREATIVE STUDIO</span><span>● REC</span></div><div class="screen-art">▶</div><div class="screen-foot"><span>EDIT · CREATE · INSPIRE</span><span>9:16 / 4K</span></div></div></div>
+</section>
+<div class="wrap stats">
+  <div class="stat"><strong>Reels</strong><span>Short-form content</span></div>
+  <div class="stat"><strong>Long-form</strong><span>YouTube & storytelling</span></div>
+  <div class="stat"><strong>Creative</strong><span>Ideas into visuals</span></div>
+</div>
+<section class="wrap" id="work">
+  <div class="section-head"><div><div class="eyebrow">Selected projects</div><h2>Featured <span class="gradient">work.</span></h2></div><p>A small preview of the kind of edits I create. Replace these sample tiles with your own video thumbnails and links.</p></div>
+  <div class="cards">
+    <article class="project"><div class="thumb t1">▶</div><div class="project-body"><div class="tag">01 · Short-form</div><h3>Cinematic Reel</h3><p>Colour, rhythm and transitions designed for a strong first impression.</p></div></article>
+    <article class="project"><div class="thumb t2">▶</div><div class="project-body"><div class="tag">02 · Social media</div><h3>Creator Edit</h3><p>Captions, sound design and pacing that keep the story moving.</p></div></article>
+    <article class="project"><div class="thumb t3">▶</div><div class="project-body"><div class="tag">03 · YouTube</div><h3>Story-driven Video</h3><p>A clean edit with a clear flow, polished visuals and engaging structure.</p></div></article>
+  </div>
+</section>
+<section class="wrap" id="services">
+  <div class="section-head"><div><div class="eyebrow">What I can do</div><h2>My <span class="gradient">services.</span></h2></div><p>Flexible editing support for creators, personal brands and businesses.</p></div>
+  <div class="services">
+    <div class="service"><div class="ico">📱</div><h3>Instagram Reels & Shorts</h3><p>Fast-paced edits, subtitles, hooks, transitions and platform-ready exports.</p></div>
+    <div class="service"><div class="ico">🎬</div><h3>YouTube Video Editing</h3><p>Structured long-form edits, clean cuts, B-roll, audio and visual flow.</p></div>
+    <div class="service"><div class="ico">🎨</div><h3>Colour Grading</h3><p>Consistent tones and a polished visual mood that suits your footage.</p></div>
+    <div class="service"><div class="ico">🔊</div><h3>Sound & Motion</h3><p>Music sync, sound effects, animated text and smooth motion graphics.</p></div>
+  </div>
+</section>
+<section class="wrap about" id="about">
+  <div class="about-card">✦</div>
+  <div><div class="eyebrow">A little about me</div><h2>Creative mind.<br><span class="gradient">Editor’s eye.</span></h2><p>Hey, I’m <strong>Your Name</strong> — a video editor and content creator who enjoys turning simple footage into clear, energetic and memorable videos. I focus on detail, timing and storytelling in every edit.</p><div class="chips"><span class="chip">Reels & Shorts</span><span class="chip">YouTube Editing</span><span class="chip">Colour Grading</span><span class="chip">Sound Design</span><span class="chip">CapCut / Your Tools</span></div></div>
+</section>
+<section class="wrap" id="contact"><div class="contact"><div><div class="eyebrow">Have a project in mind?</div><h2>Let’s create something<br>worth watching.</h2><p>For collaborations, edits and enquiries — reach out.</p></div><a class="btn primary" href="mailto:yourmail@example.com">Contact me ↗</a></div></section>
+</main>
+<footer class="wrap"><span>© <span id="year">2026</span> Your Name. All rights reserved.</span><span>Instagram · YouTube · WhatsApp — add your links</span></footer>
+</body>
+</html>
